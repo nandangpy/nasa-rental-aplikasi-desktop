@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="226" pageHeight="566" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b1e2bfd9-bf03-4847-95b4-8ce983b682d4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="param" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT sw.ID_SEWA, pl.NAMA, sw.TGL_KEMBALI, sw.LAMA, sw.TOTAL, mb.NO_POL, mb.MERK
+FROM TB_SEWA sw, TB_MOBIL mb, TB_PELANGGAN pl, TB_PEGAWAI pg
+WHERE sw.NO_POL = mb.NO_POL 
+AND sw.ID_SEWA = pl.ID_SEWA
+AND sw.ID_SEWA = $P{param}]]>
+	</queryString>
+	<field name="ID_SEWA" class="java.math.BigDecimal"/>
+	<field name="NAMA" class="java.lang.String"/>
+	<field name="TGL_KEMBALI" class="java.sql.Timestamp"/>
+	<field name="LAMA" class="java.math.BigDecimal"/>
+	<field name="TOTAL" class="java.math.BigDecimal"/>
+	<field name="NO_POL" class="java.lang.String"/>
+	<field name="MERK" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="58" y="13" width="100" height="20" uuid="c1da93f1-7af8-4dee-ad9f-22602451c3e5"/>
+				<text><![CDATA[Nasa Rental]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="59" width="100" height="20" uuid="31e50c74-8f0f-41f2-805a-bb68051a6c4a"/>
+				<textFieldExpression><![CDATA[$F{ID_SEWA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="15" width="59" height="20" uuid="879e5169-3c0a-457d-a565-dddf34b328d1"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="15" width="100" height="20" uuid="192e006e-5d72-455c-a015-3a9a5043a678"/>
+				<textFieldExpression><![CDATA[$F{NAMA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="13" width="59" height="20" uuid="4dc7e1ba-8ca9-4a00-9cec-ecd21f09c21e"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="13" width="100" height="20" uuid="07f38bc4-714d-4380-b090-95029ba400f6"/>
+				<textFieldExpression><![CDATA[$F{TGL_KEMBALI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="41" width="100" height="20" uuid="1d51526e-c6ae-4879-b61e-43d69643fe31"/>
+				<textFieldExpression><![CDATA[$F{LAMA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="86" y="105" width="100" height="20" uuid="5b6413f1-18d7-4257-b9b9-3d053b5379e8"/>
+				<textFieldExpression><![CDATA[$F{TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="19" width="100" height="20" uuid="b0145523-3e92-4b83-81ca-6e888ec92af8"/>
+				<textFieldExpression><![CDATA[$F{NO_POL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="52" width="100" height="20" uuid="015da85b-81cc-4db2-b5fd-5cf555d7b6d6"/>
+				<textFieldExpression><![CDATA[$F{MERK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="19" width="86" height="20" uuid="6783f05e-4c36-4bfa-8df7-3f8bf1a1d5b7"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="105" width="86" height="20" uuid="709fb179-fe86-4a72-a9a5-3dfa71211787"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

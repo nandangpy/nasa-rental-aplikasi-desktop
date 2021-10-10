@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="226" pageHeight="409" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="65a74b73-88a7-45e2-a72d-861a226f2155">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="81"/>
+	<parameter name="param" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT sw.ID_SEWA, pl.NAMA, sw.TGL_KEMBALI, sw.LAMA, sw.TOTAL, mb.NO_POL, mb.MERK
+FROM TB_SEWA sw, TB_MOBIL mb, TB_PELANGGAN pl, TB_PEGAWAI pg
+WHERE sw.NO_POL = mb.NO_POL 
+AND sw.ID_SEWA = pl.ID_SEWA
+AND sw.ID_SEWA = $P{param}]]>
+	</queryString>
+	<field name="ID_SEWA" class="java.math.BigDecimal"/>
+	<field name="NAMA" class="java.lang.String"/>
+	<field name="TGL_KEMBALI" class="java.sql.Timestamp"/>
+	<field name="LAMA" class="java.math.BigDecimal"/>
+	<field name="TOTAL" class="java.math.BigDecimal"/>
+	<field name="NO_POL" class="java.lang.String"/>
+	<field name="MERK" class="java.lang.String"/>
+	<title>
+		<band height="61" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="0" y="-18" width="186" height="79" uuid="6feb68ea-3c1d-4c82-966f-1c51421dfd76"/>
+				<imageExpression><![CDATA["C:\\Users\\Gegen.own\\OneDrive\\Documents\\NetBeansProjects\\PDB-UAS-RentalMobil\\src\\gambar\\logoBill.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="186" height="13" uuid="2a7e46f3-a27c-4ffb-b603-183b260a9c2f"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. OPO HAYOO...?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="13" width="186" height="41" uuid="516bcb16-204f-4190-b53c-b3e2c784b219"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jalan. Menuju Kebenaran No.00x.SBY
+031-1112222/081234567890
+www.nasa-rental.co.id]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="186" height="1" uuid="56c4c816-20a2-49fe-923a-323011d8d12b"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="77" height="14" uuid="350a5eea-509b-4f2b-8add-8defd97eff80"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<text><![CDATA[No.Sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="77" height="14" uuid="b3a2017e-145f-4d80-81e5-9ca75db8cf43"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="77" height="14" uuid="c35fac4c-9458-4ada-a06a-6a7c827b9459"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<text><![CDATA[Tgl Kembali]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="47" width="186" height="1" uuid="8eeec67f-b650-489c-a51d-290b13a00558"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="77" y="1" width="10" height="15" uuid="0271c234-5b64-4591-b5ac-ec4c6c1f8452"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="14" width="10" height="15" uuid="116b2737-2f3a-43d6-af0f-c0be83201c88"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="28" width="10" height="15" uuid="86335d4c-d4cd-451e-a36c-5c74960f10f6"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="87" y="1" width="99" height="14" uuid="f33939af-f898-47e1-b479-c6b2712adb32"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{ID_SEWA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="14" width="100" height="15" uuid="29feda34-bb0b-4832-83fc-ee2630e1a558"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{NAMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="28" width="99" height="15" uuid="0f996b14-1ef9-4b5a-bb20-ddc18f44c91f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{TGL_KEMBALI}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="77" height="15" uuid="9fc0e64b-d903-479c-a201-f80a7214c579"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<text><![CDATA[No.Polisi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="37" width="77" height="15" uuid="6471c004-b0d3-46eb-9839-d4c6a0cc715b"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<text><![CDATA[Merk Mobil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="52" width="77" height="15" uuid="40a54b0b-b1b8-4312-a672-f81cd75f7cdb"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<text><![CDATA[Lama Sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="77" height="15" uuid="296ad7a0-a424-4517-8f79-11fcf45385d1"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="22" width="10" height="15" uuid="d888b9ff-e984-4397-9d53-e2a49a8686bd"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="37" width="10" height="15" uuid="38112dc2-ad19-466d-977d-f79d401d9167"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="52" width="10" height="15" uuid="66b1f11a-1b7a-4490-8a96-ce8429e812c2"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="67" width="10" height="15" uuid="cc67eeff-cc43-49c2-a45b-8b5311838025"/>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="87" y="22" width="99" height="15" uuid="c85ae52e-f349-4c2a-a50c-f7c3a092304c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{NO_POL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="37" width="99" height="15" uuid="d611a658-7029-4211-8162-c4c4292b2579"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{MERK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="52" width="99" height="15" uuid="6843bf54-1a1a-469c-9aee-4025604abfdd"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{LAMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="67" width="99" height="20" uuid="14ec7c76-ea5c-4293-8658-fbba0c7738ad"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="2" width="186" height="20" uuid="549bcb5c-8ca3-4c68-83e2-ef1cd5dd79fb"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KET:Pengembalian dan pelunasan.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="87" width="186" height="1" uuid="d524075d-6c86-4779-85d9-3f1f8371ff2f"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="47">
+			<staticText>
+				<reportElement x="0" y="0" width="186" height="14" uuid="0ba9eb1b-15b1-454d-94f4-4ac11fd7361d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[nota:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="186" height="31" uuid="83fe7b25-75ec-4850-976c-0349751e9a40"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Denda keterlambatan pengembalian mobil dan Segala jenis Kerusakan mobil tidak termasuk dalam struk ini.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="45" width="186" height="1" uuid="2b8fa31e-4513-4c41-99fe-b7ab13f4c4da"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="186" height="54" uuid="4c4a76c6-e72f-402b-af17-b0b35a3fc802"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana"/>
+				</textElement>
+				<text><![CDATA[NASA RENTAL adalah solusi untuk anda saat membutuhan mobil setiap saat. TERIMA KASIH :)]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
