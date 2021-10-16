@@ -173,7 +173,7 @@ public class Login extends javax.swing.JFrame {
             while(hasil.next()){
                 baris = hasil.getRow();
                 hak = hasil.getString("type");
-                //Mengambil column nama berdasarkan login DB.
+                
                 Home.namaLogin.setText(hasil.getString(2));
                
             }
