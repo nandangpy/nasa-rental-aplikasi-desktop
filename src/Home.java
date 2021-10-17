@@ -303,12 +303,12 @@ public class Home extends javax.swing.JFrame {
 
 
     public void Admin() {
-       //To change body of generated methods, choose Tools | Templates.
+       
         tambahStaffBtn.setVisible(true);
     }
 
     public void Staff() {
-        //To change body of generated methods, choose Tools | Templates.
+        
         tambahStaffBtn.setVisible(false);
     }
 }
