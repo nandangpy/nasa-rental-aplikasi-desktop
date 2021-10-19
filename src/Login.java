@@ -180,7 +180,6 @@ public class Login extends javax.swing.JFrame {
             
             if(baris==1){
                 //JOptionPane.showMessageDialog(null, "Berhasil Login");
-//                new Home().show();
                 this.dispose();
                 if (hak.equals("Admin")) {
                     Home h = new Home();
