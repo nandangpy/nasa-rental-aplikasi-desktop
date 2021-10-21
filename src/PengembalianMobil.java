@@ -271,7 +271,6 @@ public class PengembalianMobil extends javax.swing.JInternalFrame {
         lblNoKtp.setText(null);
     }
     
-    //TABLE Tampilakan
     private void tampilTransaksi(){
         Object[] header = {"NO.SEWA", "NO.PEGAWAI", "NO.POLISI", "TGL-PEMINJAMAN", "TLG-PENGEMBALIAN", "LAMA", "TOTAL HARGA"};
         DefaultTableModel tabmode = new DefaultTableModel(null, header);
