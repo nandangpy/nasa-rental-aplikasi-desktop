@@ -209,7 +209,6 @@ public class PinjamMobil extends javax.swing.JInternalFrame {
     }
     
     
-    //BUTTON LANJUT
     private void lanjutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanjutBtnActionPerformed
         // TODO add your handling code here:
         if (namaPeminjamTxt.getText().isEmpty() ||
