@@ -234,8 +234,6 @@ public class PinjamMobil extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_lanjutBtnActionPerformed
     
-   
-    //Button SIMPAN
     private void batalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batalBtnActionPerformed
         // TODO add your handling code here:
         
