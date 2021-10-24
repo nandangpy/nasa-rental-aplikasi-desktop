@@ -295,7 +295,6 @@ public class TambahMobil extends javax.swing.JInternalFrame {
         pesanGagal.setText(null);
     }
     
-    //TABLE Tampilakan
     public void tampilMobil(){
         Object[] header = {"NO POLISI", "MERK", "TAHUN", "WARNA", "HARGA", "STATUS"};
         DefaultTableModel tabmode = new DefaultTableModel(null, header);
