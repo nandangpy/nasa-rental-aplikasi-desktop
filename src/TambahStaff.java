@@ -306,7 +306,6 @@ public class TambahStaff extends javax.swing.JInternalFrame {
         pesanGagal.setText(null);
     }
     
-    //TABLE Tampilakan
     private void tampilPegawai(){
         Object[] header = {"ID PEGAWAI", "NAMA", "ALAMAT", "NO. TELPON"};
         DefaultTableModel tabmode = new DefaultTableModel(null, header);
