@@ -848,7 +848,7 @@ public class TransaksiMobil extends javax.swing.JInternalFrame {
             SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
             Date saatIni = new Date();
             
-            int lama_sewa = (int)lamaSpinner.getValue();   //Mengambil nilai LamaPinjaman
+            int lama_sewa = (int)lamaSpinner.getValue();
             Date tgl = tglPeminjaman.getDate();
             
             Calendar calTambah = Calendar.getInstance();
