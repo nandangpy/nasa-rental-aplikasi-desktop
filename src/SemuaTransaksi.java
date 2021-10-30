@@ -547,8 +547,6 @@ public class SemuaTransaksi extends javax.swing.JInternalFrame {
         }
     }
    
-    
-    //HAPUS TRANSAKSI
     private void hapusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusBtnActionPerformed
         // TODO add your handling code here:
         String id="";
