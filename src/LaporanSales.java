@@ -217,7 +217,6 @@ public class LaporanSales extends javax.swing.JInternalFrame {
         tampilTransaksi();
     }
     
-    //TABLE Tampilakan
     private void tampilTransaksi(){
         Object[] header = {"NO.SEWA", "NO.PEGAWAI", "NO.POLISI", "TGL-PEMINJAMAN", "TLG-PENGEMBALIAN", "LAMA", "TOTAL HARGA"};
         DefaultTableModel tabmode = new DefaultTableModel(null, header);
