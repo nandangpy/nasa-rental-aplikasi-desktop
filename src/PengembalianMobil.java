@@ -443,7 +443,6 @@ public class PengembalianMobil extends javax.swing.JInternalFrame {
         tglHariIni.setText(sdf.format(hariIni));
     }
     
-    //FUNGSI PRINT
     public void cetakBill() {
         try {
             KonekDB n = new KonekDB();
