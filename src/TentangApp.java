@@ -12,8 +12,7 @@ public class TentangApp extends javax.swing.JInternalFrame {
     /**
      * Creates new form TambahStaff
      */
-    
-    //add about
+   
     public TentangApp() {
         initComponents();
         //setVisible(True);
