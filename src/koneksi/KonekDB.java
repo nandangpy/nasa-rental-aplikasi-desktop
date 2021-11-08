@@ -17,7 +17,7 @@ public class KonekDB {
     Connection koneksi;
     public String url="oracle.jdbc.OracleDriver";
     public String database ="jdbc:oracle:thin:@localhost:1521:XE";
-    
+    //user pass
     public String username ="kelompoknasa";
     public String password ="nasarental";
     
