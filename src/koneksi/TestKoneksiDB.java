@@ -6,6 +6,7 @@ package koneksi;
  */
 public class TestKoneksiDB {
 
+    //db testting
     public static void main(String[] args) {
         
         connection koneksi = (connection) new KonekDB().getConnection();
