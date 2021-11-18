@@ -518,7 +518,6 @@ public class SemuaTransaksi extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    //TABLE Tampilakan
     private void tampilTransaksi(){
         Object[] header = {"NO.SEWA", "NO.PEGAWAI", "NO.POLISI", "TGL-PEMINJAMAN", "TLG-PENGEMBALIAN", "LAMA", "TOTAL HARGA"};
         DefaultTableModel tabmode = new DefaultTableModel(null, header);
