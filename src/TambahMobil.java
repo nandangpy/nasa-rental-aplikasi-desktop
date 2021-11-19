@@ -385,7 +385,6 @@ public class TambahMobil extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_hargaSewaTxtKeyTyped
 
-    //BUTTON UBAH
     private void ubahBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahBtnActionPerformed
         // TODO add your handling code here:
         String nopol="", merk= "", tahun= "", warna= "", harga= "", status="";
