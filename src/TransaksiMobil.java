@@ -861,7 +861,7 @@ public class TransaksiMobil extends javax.swing.JInternalFrame {
                 pesanGagal.setText("Tanggal Peminjaman Sudah Melampaui..!!!");
             }else{
                 int harga_sewa = Integer.parseInt(lblHrg.getText()); //Mengambil nilai hargaMobil di pars ke integer
-                int Total = harga_sewa * lama_sewa;            //Menhitung total Harga
+                int Total = harga_sewa * lama_sewa;
                 String a = Integer.toString(Total);
                 lblTotalHrg.setText(a);
             }
