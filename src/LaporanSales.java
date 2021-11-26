@@ -388,7 +388,6 @@ public class LaporanSales extends javax.swing.JInternalFrame {
         tglHariIni.setText(sdf.format(hariIni));
     }
     
-    //FUNGSI PRINT
     public void cetakBillSales() {
         try {
             KonekDB n = new KonekDB();
