@@ -382,7 +382,8 @@ public class PengembalianMobil extends javax.swing.JInternalFrame {
     private javax.swing.JButton simpanBtn;
     private javax.swing.JLabel tglHariIni;
     // End of variables declaration//GEN-END:variables
-        
+    
+    //QUERY BUILDER    
     public void comboBox(){
         try {
             Connection konek = new KonekDB().getConnection();
