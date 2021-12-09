@@ -34,7 +34,7 @@ public class TentangApp extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setTitle("TENTANG APLIKASI");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        //Redirect to image
+        
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/kelompok.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 770));
 
