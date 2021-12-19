@@ -208,6 +208,7 @@ public class LaporanSales extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //reset pencarian
     private void reset(){
         ktgSearchCb.setSelectedItem("-Cari Berdasarkan-");
         cbBulan.setSelectedIndex(0);
