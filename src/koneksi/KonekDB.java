@@ -26,7 +26,6 @@ public class KonekDB {
             Class.forName(url);
             koneksi = DriverManager.getConnection(database, username, password);
             
-            //Pesan Berhasi
             //JOptionPane.showMessageDialog(null, "KONEKSI DB BERHASIL", "Informasi", JOptionPane.INFORMATION_MESSAGE);
         } catch(Exception e) {
             JOptionPane.showMessageDialog(null, "KONEKSI DB GAGAL", "Informasi", JOptionPane.INFORMATION_MESSAGE);
