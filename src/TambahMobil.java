@@ -320,7 +320,7 @@ public class TambahMobil extends javax.swing.JInternalFrame {
         }
     }
     
-    //BUTTON HAPUS
+    
     private void hapusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusBtnActionPerformed
         // TODO add your handling code here
         String no="";
