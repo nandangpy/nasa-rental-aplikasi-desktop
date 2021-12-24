@@ -224,7 +224,7 @@ public class LaporanAnalis extends javax.swing.JInternalFrame {
         }
     }
     
-    //==========================================================================
+    //====================================================================
     public void tampilMingguan(){
          try {
             Connection koneksi = new KonekDB().getConnection();
